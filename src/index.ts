@@ -1,10 +1,11 @@
+import 'reflect-metadata';
 import Express from "express";
+import { routes } from './routes';
+import "./database";
 
 const app = Express();
-
-app.get("/base", (req,res)=>{
-    res.json("all fine!");
-})
+app.use(Express.json());
+app.use(routes);
 
 app.listen(3030, ()=>{
     console.warn("SERVER ON-LINE");
