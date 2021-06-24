@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { UserRepository } from '../repositories/UserRepository';
+
 
 export default function ensureAdmin(request: Request, response: Response, next: NextFunction){
     // const id = request.body;

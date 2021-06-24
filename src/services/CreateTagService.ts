@@ -1,10 +1,8 @@
 import { getCustomRepository } from 'typeorm';
 import { TagRepository } from '../repositories/TagsRepository';
-interface ITagRequest{
-    name: string
-}
+
 class CreateTagService{
-    async execute({name}){
+    async execute(name:string){
         if(!name){
             throw new Error("Invalid Name");
         }
